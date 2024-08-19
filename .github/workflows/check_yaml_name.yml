@@ -1,8 +1,9 @@
-name: PR Check YAML
+name: Check YAML
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+  push:
+    branches:
+      - main
 
 jobs:
   check_yaml:
@@ -21,7 +22,7 @@ jobs:
 
           find . -type f \( -name "docker-compose.yaml" -or -name "docker-compose.yml" \) | while read -r file; do
             if ! grep -qP '^name:\s[a-z0-9_-]*\r?$' "$file"; then
-              echo "There is a problem with the value of name in the submitted yaml, please make sure the value is in the range [a-z0-9_-]. And error file name：$file"
+              echo "There is a problem with the value of name in the submitted yaml, please make sure the value is in the range [a-z0-9_-]. And error file name $file"
               echo $file
               exit 1
             fi
