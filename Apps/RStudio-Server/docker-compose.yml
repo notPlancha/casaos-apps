@@ -12,18 +12,17 @@ services:
         protocol: tcp
     cap_add: []
     labels:
-      icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/icon.png
+      icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/icon.png
     restart: unless-stopped
     network_mode: bridge
 x-casaos:
   author: notPlancha
-  developer: LisonEvf
   category: Developer
   hostname: ""
-  icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/icon.png
+  icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/icon.png
   screenshot_link:
-    - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/screenshot-1.png
-    - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/screenshot-2.png
   index: /
   is_uncontrolled: false
   port_map: "8787"
@@ -32,5 +31,3 @@ x-casaos:
     en_us: Rstudio Server
   description:
     en_us: RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, history, debugging, and workspace management.
-  architectures:
-    - amd64
