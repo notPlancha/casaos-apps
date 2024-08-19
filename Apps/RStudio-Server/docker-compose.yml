@@ -32,3 +32,5 @@ x-casaos:
     en_us: Rstudio Server
   description:
     en_us: RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, history, debugging, and workspace management.
+  architectures:
+    - amd64
