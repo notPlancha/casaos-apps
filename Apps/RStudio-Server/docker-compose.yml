@@ -17,6 +17,7 @@ services:
     network_mode: bridge
 x-casaos:
   author: notPlancha
+  developer: LisonEvf
   category: Developer
   hostname: ""
   icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/icon.png
@@ -27,7 +28,6 @@ x-casaos:
   is_uncontrolled: false
   port_map: "8787"
   scheme: http
-  store_app_id: rstudio
   title:
     en_us: Rstudio Server
   description:
