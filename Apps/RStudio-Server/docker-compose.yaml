@@ -1,0 +1,35 @@
+name: rstudio
+services:
+  rstudio:
+    image: rocker/rstudio:4.4.1
+    environment:
+      - DISABLE_AUTH=true
+      - ROOT=false
+      - PASSWORD=yourpassword
+    ports:
+      - target: 8787
+        published: "8787"
+        protocol: tcp
+    cap_add: []
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/icon.png
+    restart: unless-stopped
+    network_mode: bridge
+x-casaos:
+  author: notPlancha
+  category: Developer
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/icon.png
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@Apps/RStudio-Server/screenshot-2.png
+  index: /
+  is_uncontrolled: false
+  port_map: "8787"
+  scheme: http
+  store_app_id: rstudio
+  title:
+    en_us: Rstudio Server
+  description:
+    en_us: "RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, history, debugging, and workspace management."
+  tips: []
