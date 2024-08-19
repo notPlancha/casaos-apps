@@ -1,6 +1,7 @@
 name: rstudio
 services:
   rstudio:
+    container_name: rstudio
     image: rocker/rstudio:4.4.1
     environment:
       - DISABLE_AUTH=true
@@ -15,6 +16,9 @@ services:
       icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/icon.png
     restart: unless-stopped
     network_mode: bridge
+    volumes:
+      - ./.rstudio_config:/home/rstudio/.config/rstudio
+      - ~/workspace:/home/rstudio/workspace
 x-casaos:
   author: notPlancha
   category: Developer
