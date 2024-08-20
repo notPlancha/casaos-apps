@@ -6,7 +6,6 @@ services:
     environment:
       - DISABLE_AUTH=true
       - ROOT=false
-      - PASSWORD=yourpassword
     ports:
       - target: 8787
         published: "8787"
@@ -20,6 +19,7 @@ services:
       - ./.rstudio_config:/home/rstudio/.config/rstudio
       - ~/workspace:/home/rstudio/workspace
 x-casaos:
+  main: rstudio
   author: notPlancha
   category: Developer
   hostname: ""
