@@ -18,6 +18,25 @@ services:
     volumes:
       - ./.rstudio_config:/home/rstudio/.config/rstudio
       - ~/workspace:/home/rstudio/workspace
+    x-casaos:
+      envs:
+        - container: DISABLE_AUTH
+          description:
+            en_us: ""
+        - container: ROOT
+          description:
+            en_us: ""
+      ports:
+        - container: "8787"
+          description:
+            en_us: RStudio Server
+      volumes:
+        - container: /home/rstudio/.config/rstudio
+          description:
+            en_us: RStudio configuration directory
+        - container: /home/rstudio/workspace
+          description:
+            en_us: RStudio workspace directory
 x-casaos:
   main: rstudio
   author: notPlancha
