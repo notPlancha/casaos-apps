@@ -7,3 +7,7 @@ Add link:
 ```
 https://github.com/notPlancha/casaos-apps/archive/refs/heads/main.zip
 ```
+
+# To Debug
+
+Remember `casaos-cli`
