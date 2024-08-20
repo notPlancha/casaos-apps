@@ -30,16 +30,11 @@ services:
         - container: "8787"
           description:
             en_us: RStudio Server
-      volumes:
-        - container: /home/rstudio/.config/rstudio
-          description:
-            en_us: RStudio configuration directory
-        - container: /home/rstudio/workspace
-          description:
-            en_us: RStudio workspace directory
+
 x-casaos:
   main: rstudio
   author: notPlancha
+  developer: notPlancha
   category: Developer
   hostname: ""
   icon: https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/icon.png
@@ -47,7 +42,7 @@ x-casaos:
     - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/screenshot-1.png
     - https://cdn.jsdelivr.net/gh/notPlancha/casaos-apps@main/Apps/RStudio-Server/screenshot-2.png
   index: /
-  port_map: "8787"
+  port_map: '8787'
   scheme: http
   title:
     en_us: Rstudio Server
@@ -55,3 +50,12 @@ x-casaos:
     en_us: RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, history, debugging, and workspace management.
   architectures:
     - amd64
+  volumes:
+    - container: /home/rstudio/.config/rstudio
+      description:
+        en_us: RStudio configuration directory
+    - container: /home/rstudio/workspace
+      description:
+        en_us: RStudio workspace directory
+  tagline:
+    en_us: Rstudio
